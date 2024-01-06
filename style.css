@@ -54,7 +54,7 @@
 
 .display-score{
     height: 50px;
-    width: 240px;
+    width: 300px;
     text-align: center;
     font-size: 19px;
     padding-top: 10px;
@@ -80,6 +80,7 @@
 }
 
 .confirmation{
+    text-align: center;
     margin-top: 10px;
     font-size: 20px;
     color: #302B27FF;
