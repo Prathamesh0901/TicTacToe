@@ -57,17 +57,19 @@ inputs.forEach((input) => {
 
 function checkWinner() {
     winningPatterns.forEach((pattern) => {
-        let pos1 = inputs[pattern[0]].innerText;
-        let pos2 = inputs[pattern[1]].innerText;
-        let pos3 = inputs[pattern[2]].innerText;
-        if(pos1 !== '' && pos2 !== '' && pos3 !== ''){
-            if(pos1 === pos2 && pos2 === pos3){
-                winner = pos1;
-                updateScore();
-                displayPoints();
-                displayWinner();
-                disableAll();
-                reset.innerText = 'New Game';
+        if(!winner){
+            let pos1 = inputs[pattern[0]].innerText;
+            let pos2 = inputs[pattern[1]].innerText;
+            let pos3 = inputs[pattern[2]].innerText;
+            if(pos1 !== '' && pos2 !== '' && pos3 !== ''){
+                if(pos1 === pos2 && pos2 === pos3){
+                    winner = pos1;
+                    updateScore();
+                    displayPoints();
+                    displayWinner();
+                    disableAll();
+                    reset.innerText = 'New Game';
+                }
             }
         }
     });
